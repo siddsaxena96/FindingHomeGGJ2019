@@ -44,6 +44,16 @@ public class CollectionSystem : MonoBehaviour
         hpText.GetComponent<Text>().text = "Chances: " + hp;
         Destroy(col.gameObject);
     }
+    public void DamagePlayer()
+    {
+        if (hp > 0f)
+            hp -= 1f;
+        else if (hp <= 0f)
+        {
+            //Fail();//reload scene
+        }
+        hpText.GetComponent<Text>().text = "Chances: " + hp;
+    }
     #region ---------------------------------Private Methods-------------------------------------
     private void AlcoholCollection()
     {
@@ -68,15 +78,6 @@ public class CollectionSystem : MonoBehaviour
         if (hp <= maxHP)
         {
             hp += 1;
-        }
-    }
-    private void DamagePlayer()
-    {
-        if (hp > 0f)
-            hp -= 1f;
-        else if (hp <= 0f)
-        {
-            //Fail();//reload scene
         }
     }
     #endregion

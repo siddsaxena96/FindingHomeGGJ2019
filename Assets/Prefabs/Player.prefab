@@ -65,8 +65,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 709237333
+  m_SortingLayer: 2
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: d7aa4e3a5d44b3744ad7a9fa6c4bf217, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -175,6 +175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 607dd7cb906d03a4da04e6897311c5a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thrust: 2
   walkingAnim: {fileID: 4537037185830789131}
   move: 0
 --- !u!95 &4537037185830789131
@@ -209,6 +210,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 0}
+  hpText: {fileID: 0}
+  maxHP: 3
 --- !u!1 &4537037186000141990
 GameObject:
   m_ObjectHideFlags: 0
@@ -274,8 +277,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 709237333
+  m_SortingLayer: 2
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 55fc7d831ee65b943ac32638232b5bdc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
