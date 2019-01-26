@@ -4,9 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Alcohol
-  - WaterBottle
-  - BrokenCollectibles
+  - Enemy
+  - Laser
   layers:
   - Default
   - TransparentFX
