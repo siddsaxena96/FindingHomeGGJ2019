@@ -4,33 +4,30 @@ using UnityEngine;
 
 public class BasicMovement : MonoBehaviour
 {
-    #region ---------------------Public Variables----------------------------
-    public float thrust = 2f;
-    public Animator walkingAnim;
-    public bool move;
-    #endregion
     private Rigidbody2D rb;
+    private float thrust=2f;
+    public Animator playerAnimator;
+    public bool move;
+    
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D> ();
     }
-
+    
     void Update()
     {
-        float moveHorizontal = Input.GetAxis("Horizontal");
-        // float moveVertical = Input.GetAxis ("Vertical");
-        Vector3 movement = new Vector3(moveHorizontal, 0, 0);
-        if (move)
-        {
+        float moveHorizontal = Input.GetAxis ("Horizontal");        
+        Vector3 movement = new Vector3 (moveHorizontal, 0,0 );        
+        
+        if(move){
             rb.velocity = movement * thrust;
-        }
-        if (rb.velocity == Vector2.zero)
-        {
-            walkingAnim.Play("NONE");
+            playerAnimator.SetBool("isWalking",true);        
         }
         else
-        {
-            walkingAnim.Play("Walking");
-        }
+            rb.velocity=Vector2.zero;
+        
+        if(rb.velocity==Vector2.zero){                 
+            playerAnimator.SetBool("isWalking",false);        
+        }        
     }
 }

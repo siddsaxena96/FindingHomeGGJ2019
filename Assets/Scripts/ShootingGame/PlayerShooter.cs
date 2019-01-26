@@ -24,7 +24,7 @@ public class PlayerShooter : MonoBehaviour
         crosshairRb.position=new Vector3(Mathf.Clamp(crosshairRb.position.x,-3,7),crosshairRb.position.y,0);
 
         if(Time.time >= nextFire) {
-            if(Input.GetKeyDown (KeyCode.Space)) {
+            if(Input.GetMouseButtonDown(0)) {
                 Fire();
                 Debug.Log ("Shoot");
             }
