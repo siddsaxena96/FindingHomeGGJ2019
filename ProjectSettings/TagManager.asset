@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Enemy
   - Laser
+  - BrokenCollectibles
+  - WaterBottle
+  - Alcohol
+  - Platform
   layers:
   - Default
   - TransparentFX

@@ -22,6 +22,7 @@ public class FloorDrugsController : MonoBehaviour
         }
         else if (col.gameObject.tag == "WaterBottle")
         {
+
             GameObject tempObj = Instantiate(waterBottleBroken);
             tempObj.transform.position = collisionLocation.position;
             Destroy(col.gameObject);
