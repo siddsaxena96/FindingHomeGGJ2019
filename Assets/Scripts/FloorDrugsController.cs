@@ -16,13 +16,15 @@ public class FloorDrugsController : MonoBehaviour
         Debug.Log(collisionLocation);
         if (col.gameObject.tag == "Alcohol")
         {
+            GameObject tempObj = Instantiate(alcoholBroken);
+            tempObj.transform.position = collisionLocation.position;
             Destroy(col.gameObject);
-            Instantiate(alcoholBroken, collisionLocation);
         }
         else if (col.gameObject.tag == "WaterBottle")
         {
+            GameObject tempObj = Instantiate(waterBottleBroken);
+            tempObj.transform.position = collisionLocation.position;
             Destroy(col.gameObject);
-            Instantiate(waterBottleBroken, collisionLocation);
         }
     }
 }
