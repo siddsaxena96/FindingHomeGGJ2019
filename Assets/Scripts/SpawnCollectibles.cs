@@ -11,12 +11,34 @@ public class SpawnCollectibles : MonoBehaviour
     public GameObject waterBottle;
     void Start()
     {
-        StartCoroutine(SpawnAlcoholWithDelay());
-        StartCoroutine(SpawnWaterlWithDelay());
+        CustomGameManager.Instance.isPaused = false;
+        SpawnBottles();
+    }
+    void Update()
+    {
+        if (CustomGameManager.Instance.isPaused == true)
+        {
+            var alcoholClones = GameObject.FindGameObjectsWithTag("Alcohol");
+            foreach (var clone in alcoholClones)
+            {
+                Destroy(clone);
+            }
+            var waterClones = GameObject.FindGameObjectsWithTag("WaterBottle");
+            foreach (var clone in waterClones)
+            {
+                Destroy(clone);
+            }
+            var brokenClones = GameObject.FindGameObjectsWithTag("BrokenCollectibles");
+            foreach (var clone in brokenClones)
+            {
+                Destroy(clone);
+            }
+        }
+
     }
     IEnumerator SpawnAlcoholWithDelay()
     {
-        while (true)
+        while (CustomGameManager.Instance.isPaused == false)
         {
             float SpawnTimeDifference = Random.Range(1 * alcoholSpawnDelay, 3 * alcoholSpawnDelay);
 
@@ -27,7 +49,7 @@ public class SpawnCollectibles : MonoBehaviour
     }
     IEnumerator SpawnWaterlWithDelay()
     {
-        while (true)
+        while (CustomGameManager.Instance.isPaused == false)
         {
             float SpawnTimeDifference = Random.Range(1 * waterSpawnDelay, 3 * waterSpawnDelay);
 
@@ -45,5 +67,10 @@ public class SpawnCollectibles : MonoBehaviour
     {
         Vector3 SpawnLocation = new Vector3(Random.Range(-5.8f, 5.8f), 5f, 0f);
         Instantiate(waterBottle, SpawnLocation, Quaternion.identity);
+    }
+    public void SpawnBottles()
+    {
+        StartCoroutine(SpawnAlcoholWithDelay());
+        StartCoroutine(SpawnWaterlWithDelay());
     }
 }

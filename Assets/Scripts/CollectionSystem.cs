@@ -54,7 +54,7 @@ public class CollectionSystem : MonoBehaviour
             hp -= 1f;
         else if (hp <= 0f)
         {
-            //Fail();//reload scene
+            CustomGameManager.Instance.Fail();
         }
         hpText.GetComponent<Text>().text = "Chances: " + hp;
     }
