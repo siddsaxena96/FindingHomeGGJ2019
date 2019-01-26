@@ -19,7 +19,7 @@ public class CollectionSystem : MonoBehaviour
     {
         hp = maxHP;
         slider.GetComponent<Slider>().value = drunkValue;
-        hpText.GetComponent<Text>().text = "Chances: " + hp;
+        hpText.GetComponent<Text>().text = "Bottles: " + hp;
     }
     void Update()
     {
@@ -53,9 +53,8 @@ public class CollectionSystem : MonoBehaviour
     {
         if (hp > 0f)
             hp -= 1f;
-        else if (hp <= 0f)
+        if (hp <= 0f)
         {
-            //CustomGameManager.Instance.Fail();
             menuView.Fail();
         }
         hpText.GetComponent<Text>().text = "Bottles: " + hp;
@@ -70,7 +69,7 @@ public class CollectionSystem : MonoBehaviour
         slider.GetComponent<Slider>().value = drunkValue;
         if (drunkValue >= 1f)
         {
-            //Win();//next scene
+            menuView.Completion();
         }
     }
 
