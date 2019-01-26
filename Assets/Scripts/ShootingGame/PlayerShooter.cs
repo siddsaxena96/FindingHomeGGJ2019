@@ -9,6 +9,7 @@ public class PlayerShooter : MonoBehaviour
     private float nextFire;
     private float fireRate=0.35f;
     public GameObject shot;
+    public CameraShake cameraShake;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +21,8 @@ public class PlayerShooter : MonoBehaviour
     {
         // Crosshair movement controls
         crosshairRb.position = Camera.main.ScreenToWorldPoint(new Vector2(Input.mousePosition.x, Input.mousePosition.y));
+        crosshairRb.position=new Vector3(Mathf.Clamp(crosshairRb.position.x,-3,7),crosshairRb.position.y,0);
+
         if(Time.time >= nextFire) {
             if(Input.GetKeyDown (KeyCode.Space)) {
                 Fire();
@@ -33,6 +36,12 @@ public class PlayerShooter : MonoBehaviour
     void Fire() {
         Instantiate(shot, shootingPoint.position,crosshairRb.transform.rotation);        
         nextFire = Time.time + fireRate;
+    }
+
+    void OnCollisionEnter2D(Collision2D col)
+    {        
+        if(col.gameObject.tag=="Enemy")
+            cameraShake.Shake();
     }
     
 }

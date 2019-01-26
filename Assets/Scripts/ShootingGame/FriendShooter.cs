@@ -6,6 +6,9 @@ public class FriendShooter : MonoBehaviour
 {
     public Transform[] shootPoints;
     public GameObject friendLaser;
+    public CameraShake cameraShake;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,9 +24,10 @@ public class FriendShooter : MonoBehaviour
             yield return new WaitForSeconds(4);
         }
     }
-    // Update is called once per frame
-    void Update()
-    {
-        
+    void OnCollisionEnter2D(Collision2D col)
+    {        
+        if(col.gameObject.tag=="Enemy")
+            cameraShake.Shake();
     }
+
 }
