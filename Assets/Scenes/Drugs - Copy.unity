@@ -220,7 +220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ccd36d3c9075d641850c8db5f910d5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  retryButton: {fileID: 0}
+  failUI: {fileID: 132954251}
 --- !u!4 &30592305
 Transform:
   m_ObjectHideFlags: 0
@@ -599,7 +599,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc730f759e533824b9d9f661236b335f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuView: {fileID: 30592303}
   isPaused: 0
 --- !u!1 &280843307
 GameObject:
@@ -925,6 +924,45 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &446102715 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2521799932063866828, guid: 1c1405aed459b6a48a3b6a3b956c2ab9,
+    type: 3}
+  m_PrefabInstance: {fileID: 632792673}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &446102716 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 94707765190646951, guid: 1c1405aed459b6a48a3b6a3b956c2ab9,
+    type: 3}
+  m_PrefabInstance: {fileID: 632792673}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 446102715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6b72f6a207baf54fb5ec623518706a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &446102717 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2521799932063866825, guid: 1c1405aed459b6a48a3b6a3b956c2ab9,
+    type: 3}
+  m_PrefabInstance: {fileID: 632792673}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &446102718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 446102715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f188e7fddc18fec44b32ffb72e2ef5db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thrust: 5.8
+  playerAnimator: {fileID: 446102717}
+  move: 1
 --- !u!1 &494243709
 GameObject:
   m_ObjectHideFlags: 0
@@ -1208,6 +1246,11 @@ PrefabInstance:
       propertyPath: hpText
       value: 
       objectReference: {fileID: 1093717220}
+    - target: {fileID: 94707765190646951, guid: 1c1405aed459b6a48a3b6a3b956c2ab9,
+        type: 3}
+      propertyPath: menuView
+      value: 
+      objectReference: {fileID: 30592304}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c1405aed459b6a48a3b6a3b956c2ab9, type: 3}
 --- !u!1 &919424449
@@ -1807,7 +1850,7 @@ MonoBehaviour:
   alcohol: {fileID: 6036908320145819082, guid: 688cd79d6b82e5e4eba2e6d4e7833b0f, type: 3}
   alcoholBroken: {fileID: 189335624774883677, guid: 1f7ee207bc2d7f0419c73b6fc0200d02,
     type: 3}
-  collectionSystem: {fileID: 0}
+  collectionSystem: {fileID: 446102716}
 --- !u!212 &1818538494
 SpriteRenderer:
   m_ObjectHideFlags: 0

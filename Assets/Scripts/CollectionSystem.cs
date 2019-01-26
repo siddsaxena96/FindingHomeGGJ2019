@@ -10,6 +10,7 @@ public class CollectionSystem : MonoBehaviour
     public GameObject slider;
     public GameObject hpText;
     public GameObject girl;
+    public MenuView menuView;
     public float maxHP = 3f;
     #endregion
     private float drunkValue = 0f;
@@ -45,7 +46,7 @@ public class CollectionSystem : MonoBehaviour
             Debug.Log("Damaged");
             DamagePlayer();
         }
-        hpText.GetComponent<Text>().text = "Chances: " + hp;
+        hpText.GetComponent<Text>().text = "Bottles: " + hp;
         Destroy(col.gameObject);
     }
     public void DamagePlayer()
@@ -54,9 +55,10 @@ public class CollectionSystem : MonoBehaviour
             hp -= 1f;
         else if (hp <= 0f)
         {
-            CustomGameManager.Instance.Fail();
+            //CustomGameManager.Instance.Fail();
+            menuView.Fail();
         }
-        hpText.GetComponent<Text>().text = "Chances: " + hp;
+        hpText.GetComponent<Text>().text = "Bottles: " + hp;
     }
     #region ---------------------------------Private Methods-------------------------------------
     private void AlcoholCollection()

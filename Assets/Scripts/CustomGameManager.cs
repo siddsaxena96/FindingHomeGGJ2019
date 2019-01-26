@@ -5,7 +5,6 @@ using UnityEngine;
 public class CustomGameManager : MonoBehaviour
 {
     public static CustomGameManager Instance;
-    public GameObject menuView;
     // Start is called before the first frame update
 
     public bool isPaused;
@@ -31,10 +30,5 @@ public class CustomGameManager : MonoBehaviour
     void Update()
     {
 
-    }
-    public void Fail()
-    {
-        isPaused = true;
-        //MenuView.fail
     }
 }

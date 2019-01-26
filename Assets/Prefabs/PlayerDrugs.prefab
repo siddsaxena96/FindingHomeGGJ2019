@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 4537037185830789134, guid: dbe72b6906dfaad45b0e179978c43fb5,
         type: 3}
       propertyPath: m_Name
-      value: Player
+      value: PlayerDrugs
       objectReference: {fileID: 0}
     - target: {fileID: 4537037185830789134, guid: dbe72b6906dfaad45b0e179978c43fb5,
         type: 3}
@@ -152,7 +152,8 @@ PrefabInstance:
       propertyPath: m_Color.b
       value: 0.990566
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4537037185830789130, guid: dbe72b6906dfaad45b0e179978c43fb5, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: dbe72b6906dfaad45b0e179978c43fb5, type: 3}
 --- !u!95 &2521799932063866825 stripped
 Animator:

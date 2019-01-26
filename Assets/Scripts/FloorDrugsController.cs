@@ -27,8 +27,8 @@ public class FloorDrugsController : MonoBehaviour
         {
             GameObject tempObj = Instantiate(waterBottleBroken);
             tempObj.transform.position = collisionLocation.position;
-            Destroy(col.gameObject);
             collectionSystem.DamagePlayer();
+            Destroy(col.gameObject);
         }
     }
 }

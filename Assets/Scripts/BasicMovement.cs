@@ -16,23 +16,20 @@ public class BasicMovement : MonoBehaviour
 
     void Update()
     {
-        if (!CustomGameManager.Instance.isPaused)
+        float moveHorizontal = Input.GetAxis("Horizontal");
+        Vector3 movement = new Vector3(moveHorizontal, 0, 0);
+
+        if (move)
         {
-            float moveHorizontal = Input.GetAxis("Horizontal");
-            Vector3 movement = new Vector3(moveHorizontal, 0, 0);
+            rb.velocity = movement * thrust;
+            playerAnimator.SetBool("isWalking", true);
+        }
+        else
+            rb.velocity = Vector2.zero;
 
-            if (move)
-            {
-                rb.velocity = movement * thrust;
-                playerAnimator.SetBool("isWalking", true);
-            }
-            else
-                rb.velocity = Vector2.zero;
-
-            if (rb.velocity == Vector2.zero)
-            {
-                playerAnimator.SetBool("isWalking", false);
-            }
+        if (rb.velocity == Vector2.zero)
+        {
+            playerAnimator.SetBool("isWalking", false);
         }
     }
 }

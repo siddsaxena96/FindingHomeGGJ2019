@@ -6,8 +6,13 @@ using UnityEngine.UI;
 
 public class MenuView : MonoBehaviour
 {
-    #region -------Public Method--------------------
-    public GameObject retryButton;
+    public GameObject failUI;
+    private void Start()
+    {
+        failUI.gameObject.SetActive(false);
+    }
+    #region -------Public Methods--------------------
+
     public void OnRetryClick()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
@@ -17,9 +22,11 @@ public class MenuView : MonoBehaviour
     {
 
     }
-    #endregion
-    private void Start()
+    public void Fail()
     {
-        retryButton.gameObject.SetActive(false);
+        CustomGameManager.Instance.isPaused = true;
+        failUI.gameObject.gameObject.SetActive(true);
     }
+    #endregion
+
 }
