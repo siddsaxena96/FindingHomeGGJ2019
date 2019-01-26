@@ -75,7 +75,7 @@ public class CollectionSystem : MonoBehaviour
             nauseaValue -= 0.2f;
         }
         slider.GetComponent<Slider>().value = nauseaValue;
-        if (hp <= maxHP)
+        if (hp < maxHP)
         {
             hp += 1;
         }
