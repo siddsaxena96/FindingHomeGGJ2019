@@ -20,6 +20,8 @@ public class PlayerShooter : MonoBehaviour
     {
         // Crosshair movement controls
         crosshairRb.position = Camera.main.ScreenToWorldPoint(new Vector2(Input.mousePosition.x, Input.mousePosition.y));
+        crosshairRb.position=new Vector3(Mathf.Clamp(crosshairRb.position.x,-3,7),crosshairRb.position.y,0);
+
         if(Time.time >= nextFire) {
             if(Input.GetKeyDown (KeyCode.Space)) {
                 Fire();
