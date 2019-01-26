@@ -9,6 +9,8 @@ TagManager:
   - Ghost
   - Treat
   - Wall
+  - Hurdle
+  - JumpPad
   layers:
   - Default
   - TransparentFX

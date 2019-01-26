@@ -19,7 +19,6 @@ public class ObstaclesController : MonoBehaviour
     }
     void Update()
     {
-        bool screenFull = false;
         int Ctr = 0;
         float spawnPointX = -100;
         float spawnPointY = -100; 
