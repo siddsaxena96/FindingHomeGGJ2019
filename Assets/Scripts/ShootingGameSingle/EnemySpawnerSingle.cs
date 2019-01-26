@@ -7,8 +7,10 @@ public class EnemySpawnerSingle : MonoBehaviour
 {
     public GameObject[] spawnPoints;
     public GameObject enemy;
-    public Rigidbody2D enemyHoard;
+    public GameObject enemyHoard;
     public Transform hoardPosition;
+    public PlayerShooter shooter;
+    public GameObject friend;
     public int score=0;
     private float waitTime=2f;
     public Text scoreText;
@@ -35,13 +37,17 @@ public class EnemySpawnerSingle : MonoBehaviour
                 }
             }
         }
-          Debug.Log("YO");
+        Debug.Log("YO");
+        shooter.enabled=false;
         yield return new WaitForSeconds(2);
-        GameObject hoardSpawn = Instantiate(enemyHoard.gameObject,spawnPoints[2].transform.position,Quaternion.identity) as GameObject;
-        while(Vector2.Distance(hoardSpawn.transform.position,hoardPosition.position)>2){
-            enemyHoard.velocity=(new Vector2(hoardPosition.position.x,hoardPosition.position.y)-enemyHoard.position).normalized*5f;
+        GameObject hoardSpawn = Instantiate(enemyHoard,spawnPoints[2].transform.position,Quaternion.identity) as GameObject;
+        Rigidbody2D hoardRb=hoardSpawn.GetComponent<Rigidbody2D>();
+         while(Vector2.Distance(hoardSpawn.transform.position,hoardPosition.position)>2){
+             hoardRb.velocity=(new Vector2(hoardPosition.position.x,hoardPosition.position.y)-hoardRb.position).normalized*5f;
             yield return new WaitForSeconds(0.1f);   
         }
-
+        hoardRb.velocity=Vector2.zero;
+        hoardSpawn.GetComponent<Animator>().enabled=true;
+        friend.SetActive(true);
     }
 }

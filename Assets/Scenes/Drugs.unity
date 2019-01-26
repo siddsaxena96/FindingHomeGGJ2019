@@ -146,7 +146,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -2.3299866, y: 0}
+  m_AnchoredPosition: {x: -2.329956, y: 0}
   m_SizeDelta: {x: 5.34, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &148478348
@@ -607,21 +607,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2114871931101717349, guid: dbe72b6906dfaad45b0e179978c43fb5,
-        type: 3}
-      propertyPath: slider
-      value: 
-      objectReference: {fileID: 255420310}
-    - target: {fileID: 2114871931101717349, guid: dbe72b6906dfaad45b0e179978c43fb5,
-        type: 3}
-      propertyPath: hpText
-      value: 
-      objectReference: {fileID: 1093717220}
-    - target: {fileID: 2114871931101717349, guid: dbe72b6906dfaad45b0e179978c43fb5,
-        type: 3}
-      propertyPath: girl
-      value: 
-      objectReference: {fileID: 2104660052}
     - target: {fileID: 4537037185830789135, guid: dbe72b6906dfaad45b0e179978c43fb5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -692,6 +677,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4537037185830789128, guid: dbe72b6906dfaad45b0e179978c43fb5,
+        type: 3}
+      propertyPath: m_GravityScale
+      value: 6.38
+      objectReference: {fileID: 0}
     - target: {fileID: 4537037185830789130, guid: dbe72b6906dfaad45b0e179978c43fb5,
         type: 3}
       propertyPath: walkingAnim
@@ -707,11 +697,21 @@ PrefabInstance:
       propertyPath: thrust
       value: 6.5
       objectReference: {fileID: 0}
-    - target: {fileID: 4537037185830789128, guid: dbe72b6906dfaad45b0e179978c43fb5,
+    - target: {fileID: 2114871931101717349, guid: dbe72b6906dfaad45b0e179978c43fb5,
         type: 3}
-      propertyPath: m_GravityScale
-      value: 6.38
-      objectReference: {fileID: 0}
+      propertyPath: slider
+      value: 
+      objectReference: {fileID: 255420310}
+    - target: {fileID: 2114871931101717349, guid: dbe72b6906dfaad45b0e179978c43fb5,
+        type: 3}
+      propertyPath: hpText
+      value: 
+      objectReference: {fileID: 1093717220}
+    - target: {fileID: 2114871931101717349, guid: dbe72b6906dfaad45b0e179978c43fb5,
+        type: 3}
+      propertyPath: girl
+      value: 
+      objectReference: {fileID: 2104660052}
     - target: {fileID: 4537037186000141984, guid: dbe72b6906dfaad45b0e179978c43fb5,
         type: 3}
       propertyPath: m_DrawMode

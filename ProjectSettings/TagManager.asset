@@ -10,6 +10,7 @@ TagManager:
   - WaterBottle
   - Alcohol
   - Platform
+  - wall
   layers:
   - Default
   - TransparentFX
