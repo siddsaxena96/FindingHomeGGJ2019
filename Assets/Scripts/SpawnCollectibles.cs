@@ -38,12 +38,12 @@ public class SpawnCollectibles : MonoBehaviour
     }
     void SpawnAlcohol()
     {
-        Vector3 SpawnLocation = new Vector3(Random.Range(-6f, 6f), 5f, 0f);
+        Vector3 SpawnLocation = new Vector3(Random.Range(-5.8f, 5.8f), 5f, 0f);
         Instantiate(alcohol, SpawnLocation, Quaternion.identity);
     }
     void SpawnWaterBottle()
     {
-        Vector3 SpawnLocation = new Vector3(Random.Range(-6f, 6f), 5f, 0f);
+        Vector3 SpawnLocation = new Vector3(Random.Range(-5.8f, 5.8f), 5f, 0f);
         Instantiate(waterBottle, SpawnLocation, Quaternion.identity);
     }
 }

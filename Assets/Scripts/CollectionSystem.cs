@@ -9,20 +9,24 @@ public class CollectionSystem : MonoBehaviour
     #region ---------------------------Public Variables--------------------------
     public GameObject slider;
     public GameObject hpText;
+    public GameObject girl;
     public float maxHP = 3f;
     #endregion
-    private float nauseaValue = 0f;
+    private float drunkValue = 0f;
     private float hp;
     void Start()
     {
         hp = maxHP;
-        slider.GetComponent<Slider>().value = nauseaValue;
+        slider.GetComponent<Slider>().value = drunkValue;
         hpText.GetComponent<Text>().text = "Chances: " + hp;
     }
     void Update()
     {
-        // hpText.GetComponent<Text>().text = "Chances: " + hp;
-        Debug.Log(hp);
+        SpriteRenderer renderer = girl.GetComponent<SpriteRenderer>();
+        Color color = renderer.color;
+        renderer.color = new Color(color.r, color.g, color.b, 1 - drunkValue);// = 255 / drunkValue;
+        //hpText.GetComponent<Text>().text = "Chances: " + hp;
+        //Debug.Log(hp);
     }
     void OnCollisionEnter2D(Collision2D col)
     {
@@ -57,12 +61,12 @@ public class CollectionSystem : MonoBehaviour
     #region ---------------------------------Private Methods-------------------------------------
     private void AlcoholCollection()
     {
-        if (nauseaValue < 1f)
+        if (drunkValue < 1f)
         {
-            nauseaValue += 0.2f;
+            drunkValue += 0.2f;
         }
-        slider.GetComponent<Slider>().value = nauseaValue;
-        if (nauseaValue >= 1f)
+        slider.GetComponent<Slider>().value = drunkValue;
+        if (drunkValue >= 1f)
         {
             //Win();//next scene
         }
@@ -70,15 +74,11 @@ public class CollectionSystem : MonoBehaviour
 
     private void WaterBottleCollection()
     {
-        if (nauseaValue > 0f)
+        if (drunkValue > 0f)
         {
-            nauseaValue -= 0.2f;
+            drunkValue -= 0.2f;
         }
-        slider.GetComponent<Slider>().value = nauseaValue;
-        if (hp < maxHP)
-        {
-            hp += 1;
-        }
+        slider.GetComponent<Slider>().value = drunkValue;
     }
     #endregion
 }
