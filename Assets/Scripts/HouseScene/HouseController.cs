@@ -7,6 +7,7 @@ public class HouseController : MonoBehaviour
     public Animator playerAnim;
     public Animator fallingPainting;
     public GameObject sceneChanger;
+    public AudioSource rant;
 
     void OnCollisionEnter2D(Collision2D col)
     {                
@@ -26,6 +27,7 @@ public class HouseController : MonoBehaviour
         Debug.Log("Painting Falls");
         yield return new WaitForSeconds(1);
         playerAnim.SetTrigger("SadHead");
+        rant.Play();
         yield return new WaitForSeconds(5);
         movementControl.move=true;
     }

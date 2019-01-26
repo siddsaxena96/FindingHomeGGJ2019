@@ -40,14 +40,9 @@ public class EnemySpawner : MonoBehaviour
         StartCoroutine("ReturnToRoad");
     }
     
-    IEnumerator ReturnToRoad(){
-        Debug.Log("ASAD");
-        // loadingPanel.SetActive(true);      
-        // transitionAudio.Play();
-        // while(transitionAudio.isPlaying){  
-        //     yield return new WaitForSeconds(0.05f);
-        // }
-        yield return new WaitForSeconds(0.05f);
+    IEnumerator ReturnToRoad(){        
+        loadingPanel.SetActive(true);              
+        yield return new WaitForSeconds(2f);
         SceneManager.LoadScene("RoadAfterFight");     
     }
 }

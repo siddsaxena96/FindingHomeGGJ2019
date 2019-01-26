@@ -14,11 +14,11 @@ public class LoadFirstFight : MonoBehaviour
     }
 
     IEnumerator LoadFirstFightLevel(){
-        // loadingPanel.SetActive(true);      
-        // transitionAudio.Play();
-        // while(transitionAudio.isPlaying){  
-        //     yield return new WaitForSeconds(0.05f);
-        // }
+        loadingPanel.SetActive(true);      
+        transitionAudio.Play();
+        while(transitionAudio.isPlaying){  
+            yield return new WaitForSeconds(0.05f);
+        }
         yield return new WaitForSeconds(0.05f);
         SceneManager.LoadScene("ShootingGame");     
     }
