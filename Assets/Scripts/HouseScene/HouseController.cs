@@ -6,15 +6,14 @@ public class HouseController : MonoBehaviour
 {
     public Animator playerAnim;
     public Animator fallingPainting;
-
-
+    public GameObject sceneChanger;
 
     void OnCollisionEnter2D(Collision2D col)
     {                
         if(col.gameObject.tag=="Player")        
         {            
             StartCoroutine(LaunchSequence(col.gameObject.GetComponent<BasicMovement>()));
-
+            sceneChanger.SetActive(true);
         }
     }
 
