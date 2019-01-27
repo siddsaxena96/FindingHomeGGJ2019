@@ -1313,6 +1313,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerDrugs
       objectReference: {fileID: 0}
+    - target: {fileID: 2521799932063866825, guid: 1c1405aed459b6a48a3b6a3b956c2ab9,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 6b493bf108218d54e82b8d3e915cb720, type: 2}
     - target: {fileID: 94707765190646951, guid: 1c1405aed459b6a48a3b6a3b956c2ab9,
         type: 3}
       propertyPath: slider
