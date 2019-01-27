@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -16,6 +18,7 @@ public class PlayerController : MonoBehaviour
     public PlatformMove platformObj;
     public CameraFollowPlayer cameraFollowObj;
     public GameObject heartObj;
+    public Image img;
 
     void Start()
     {
@@ -70,6 +73,7 @@ public class PlayerController : MonoBehaviour
             playerIdleAnim.StopAllCoroutines();
             playerRb.transform.eulerAngles = new Vector3(0f, 0f, 0f);
             heartObj.SetActive(true);
+            StartCoroutine("loadNextLevel");
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -78,5 +82,17 @@ public class PlayerController : MonoBehaviour
         {
             cameraFollowObj.DisableFollow = true;
         }
+    }
+
+    IEnumerator loadNextLevel()
+    {
+        yield return new WaitForSeconds(2);
+        for (float i = 0; i <= 1; i += Time.deltaTime)
+        {
+            // set color with i as alpha
+            img.color = new Color(1, 1, 1, i);
+            yield return new WaitForSeconds(0.1f);
+        }
+        SceneManager.LoadScene("Drugs - Copy");
     }
 }
