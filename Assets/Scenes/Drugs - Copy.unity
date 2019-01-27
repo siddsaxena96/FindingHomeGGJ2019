@@ -600,7 +600,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc730f759e533824b9d9f661236b335f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isPaused: 0
+  isPaused: 1
 --- !u!1 &280843307
 GameObject:
   m_ObjectHideFlags: 0
@@ -931,11 +931,11 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 632792673}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &446102716 stripped
+--- !u!114 &446102716
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 94707765190646951, guid: 1c1405aed459b6a48a3b6a3b956c2ab9,
-    type: 3}
-  m_PrefabInstance: {fileID: 632792673}
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 446102715}
   m_Enabled: 1
@@ -943,6 +943,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6b72f6a207baf54fb5ec623518706a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slider: {fileID: 255420310}
+  hpText: {fileID: 1093717220}
+  girl: {fileID: 2104660052}
+  menuView: {fileID: 30592304}
+  maxHP: 3
 --- !u!95 &446102717 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 2521799932063866825, guid: 1c1405aed459b6a48a3b6a3b956c2ab9,
@@ -1127,7 +1132,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.2683021}
   m_AnchorMax: {x: 0.84700006, y: 0.5}
-  m_AnchoredPosition: {x: 78.336, y: -0.000012159}
+  m_AnchoredPosition: {x: 78.336, y: -0.000015258789}
   m_SizeDelta: {x: -627.1, y: -132.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &591499865
@@ -1308,6 +1313,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerDrugs
       objectReference: {fileID: 0}
+    - target: {fileID: 94707765190646951, guid: 1c1405aed459b6a48a3b6a3b956c2ab9,
+        type: 3}
+      propertyPath: slider
+      value: 
+      objectReference: {fileID: 255420310}
+    - target: {fileID: 94707765190646951, guid: 1c1405aed459b6a48a3b6a3b956c2ab9,
+        type: 3}
+      propertyPath: girl
+      value: 
+      objectReference: {fileID: 2104660052}
+    - target: {fileID: 94707765190646951, guid: 1c1405aed459b6a48a3b6a3b956c2ab9,
+        type: 3}
+      propertyPath: hpText
+      value: 
+      objectReference: {fileID: 1093717220}
+    - target: {fileID: 94707765190646951, guid: 1c1405aed459b6a48a3b6a3b956c2ab9,
+        type: 3}
+      propertyPath: menuView
+      value: 
+      objectReference: {fileID: 30592304}
     - target: {fileID: 2521799932063866829, guid: 1c1405aed459b6a48a3b6a3b956c2ab9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1363,26 +1388,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 94707765190646951, guid: 1c1405aed459b6a48a3b6a3b956c2ab9,
-        type: 3}
-      propertyPath: slider
-      value: 
-      objectReference: {fileID: 255420310}
-    - target: {fileID: 94707765190646951, guid: 1c1405aed459b6a48a3b6a3b956c2ab9,
-        type: 3}
-      propertyPath: girl
-      value: 
-      objectReference: {fileID: 2104660052}
-    - target: {fileID: 94707765190646951, guid: 1c1405aed459b6a48a3b6a3b956c2ab9,
-        type: 3}
-      propertyPath: hpText
-      value: 
-      objectReference: {fileID: 1093717220}
-    - target: {fileID: 94707765190646951, guid: 1c1405aed459b6a48a3b6a3b956c2ab9,
-        type: 3}
-      propertyPath: menuView
-      value: 
-      objectReference: {fileID: 30592304}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c1405aed459b6a48a3b6a3b956c2ab9, type: 3}
 --- !u!1 &919424449
@@ -1463,7 +1468,7 @@ GameObject:
   - component: {fileID: 1093717223}
   - component: {fileID: 1093717222}
   m_Layer: 5
-  m_Name: Bottles
+  m_Name: BottlesText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2140,7 +2145,7 @@ MonoBehaviour:
   alcohol: {fileID: 6036908320145819082, guid: 688cd79d6b82e5e4eba2e6d4e7833b0f, type: 3}
   alcoholBroken: {fileID: 189335624774883677, guid: 1f7ee207bc2d7f0419c73b6fc0200d02,
     type: 3}
-  collectionSystem: {fileID: 446102716}
+  collectionSystem: {fileID: 0}
 --- !u!212 &1818538494
 SpriteRenderer:
   m_ObjectHideFlags: 0
