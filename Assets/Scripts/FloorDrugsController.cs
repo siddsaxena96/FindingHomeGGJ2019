@@ -9,12 +9,14 @@ public class FloorDrugsController : MonoBehaviour
     public GameObject waterBottleBroken;
     public GameObject alcohol;
     public GameObject alcoholBroken;
+    public AudioSource shatterSound;
     public CollectionSystem collectionSystem;
     #endregion
     void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.tag == "Player")
             return;
+        shatterSound.Play();
         Transform collisionLocation = col.transform;
         Debug.Log(collisionLocation);
         if (col.gameObject.tag == "Alcohol")
