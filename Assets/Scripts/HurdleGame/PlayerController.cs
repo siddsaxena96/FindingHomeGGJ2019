@@ -5,12 +5,17 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public GameManager gameManagerObj;
-
+    public Camera mainCameraObj;
+    public Camera secondCameraObj;
     public PlayerIdleAnim playerIdleAnim;
     public float jumpPadThrust;
     public float jumpThrust;
     public float gravity;
+    public bool disableDown = false;
     public Rigidbody2D playerRb;
+    public PlatformMove platformObj;
+    public CameraFollowPlayer cameraFollowObj;
+    public GameObject heartObj;
 
     void Start()
     {
@@ -19,14 +24,14 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown("down"))
+        if (Input.GetKeyDown("down") && disableDown == false)
         {
             playerIdleAnim.UpdateAnimState(false);
             playerRb.transform.eulerAngles = new Vector3(0f, 0f, 90f);
 
             playerRb.gravityScale = 10f;
         }
-        if (Input.GetKeyUp("down"))
+        if (Input.GetKeyUp("down") && disableDown == false)
         {
             playerIdleAnim.UpdateAnimState(true);
             playerRb.transform.eulerAngles = new Vector3(0f, 0f, 0f);
@@ -54,7 +59,24 @@ public class PlayerController : MonoBehaviour
         }
         if (collision.gameObject.tag == "JumpPad")
         {
+            disableDown = true;
             playerRb.AddForce(Vector2.up * jumpPadThrust, ForceMode2D.Impulse);
+        }
+
+        if (collision.gameObject.tag == "EndLevel")
+        {
+            Debug.Log("Endlevel reached");
+            platformObj.levelEnd = true;
+            playerIdleAnim.StopAllCoroutines();
+            playerRb.transform.eulerAngles = new Vector3(0f, 0f, 0f);
+            heartObj.SetActive(true);
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "NewCam")
+        {
+            cameraFollowObj.DisableFollow = true;
         }
     }
 }

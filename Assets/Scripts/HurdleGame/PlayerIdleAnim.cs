@@ -36,6 +36,7 @@ public class PlayerIdleAnim : MonoBehaviour
                 {
                     if (z > -10)
                     {
+                        Debug.Log("playing");
                         transform.eulerAngles = new Vector3(0f, 0f, z--);
                     }
                     else

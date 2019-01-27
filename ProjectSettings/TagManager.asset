@@ -11,6 +11,11 @@ TagManager:
   - Alcohol
   - Platform
   - wall
+  - Floor
+  - Hurdle
+  - JumpPad
+  - EndLevel
+  - NewCam
   layers:
   - Default
   - TransparentFX
