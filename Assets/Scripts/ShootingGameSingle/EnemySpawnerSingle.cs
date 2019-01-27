@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class EnemySpawnerSingle : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class EnemySpawnerSingle : MonoBehaviour
     public int score=0;
     private float waitTime=2f;
     public Text scoreText;
+    public GameObject loadingPanel;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,9 +39,8 @@ public class EnemySpawnerSingle : MonoBehaviour
                 }
             }
         }
-        Debug.Log("YO");
         shooter.enabled=false;
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(4);
         GameObject hoardSpawn = Instantiate(enemyHoard,spawnPoints[2].transform.position,Quaternion.identity) as GameObject;
         Rigidbody2D hoardRb=hoardSpawn.GetComponent<Rigidbody2D>();
          while(Vector2.Distance(hoardSpawn.transform.position,hoardPosition.position)>2){
@@ -48,6 +49,11 @@ public class EnemySpawnerSingle : MonoBehaviour
         }
         hoardRb.velocity=Vector2.zero;
         hoardSpawn.GetComponent<Animator>().enabled=true;
+        yield return new WaitForSeconds(3);
         friend.SetActive(true);
+        yield return new WaitForSeconds(6);
+        loadingPanel.SetActive(true);      
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene("BarScene");     
     }
 }
