@@ -1792,6 +1792,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpiralCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 3627085314974241658, guid: db66abfa8dac16346b50a0b42f1f1ed4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3627085314974241662, guid: db66abfa8dac16346b50a0b42f1f1ed4,
         type: 3}
       propertyPath: m_LocalPosition.x

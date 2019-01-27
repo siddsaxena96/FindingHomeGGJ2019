@@ -808,6 +808,11 @@ PrefabInstance:
       propertyPath: playerAnimator
       value: 
       objectReference: {fileID: 1389304393}
+    - target: {fileID: 4537037185830789131, guid: dbe72b6906dfaad45b0e179978c43fb5,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 6b493bf108218d54e82b8d3e915cb720, type: 2}
     - target: {fileID: 2114871931101717349, guid: dbe72b6906dfaad45b0e179978c43fb5,
         type: 3}
       propertyPath: m_Enabled
