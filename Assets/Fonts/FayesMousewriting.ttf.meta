@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 09c3379a627a14d469c40a91be39605a
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: FayesMousewriting
+  fontNames:
+  - FayesMousewriting
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: fbbf6c9c749d18f428ff28e370f9d90d, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
