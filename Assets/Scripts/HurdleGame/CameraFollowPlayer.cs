@@ -15,7 +15,7 @@ public class CameraFollowPlayer : MonoBehaviour
         }
         else
         {
-            transform.position = new Vector3(27.61f, 34.63f, 0f);
+            transform.position = new Vector3(-91.2f, 34.5f, 0f);
         }
     }
 }
