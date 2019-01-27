@@ -38,4 +38,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ShootingGameSinglePlayer.unity
     guid: fe3dc5fa8528d2f4f9e9248304fbf90f
+  - enabled: 1
+    path: Assets/Scenes/BarScene.unity
+    guid: 7390a60ff022e3a429eb447484e1acb7
   m_configObjects: {}
