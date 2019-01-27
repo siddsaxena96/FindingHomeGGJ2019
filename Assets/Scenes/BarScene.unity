@@ -752,6 +752,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Friend
       objectReference: {fileID: 0}
+    - target: {fileID: 4537037185830789129, guid: dbe72b6906dfaad45b0e179978c43fb5,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4537037185830789135, guid: dbe72b6906dfaad45b0e179978c43fb5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -821,11 +826,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1.6722
-      objectReference: {fileID: 0}
-    - target: {fileID: 4537037185830789129, guid: dbe72b6906dfaad45b0e179978c43fb5,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4537037186000141991, guid: dbe72b6906dfaad45b0e179978c43fb5,
         type: 3}
@@ -1318,7 +1318,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: baf9ccfa692b5b54e9632a24037fb29d,
+      objectReference: {fileID: 21300000, guid: 61204bccbae81954ca8f6337f2cca013,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db66abfa8dac16346b50a0b42f1f1ed4, type: 3}
