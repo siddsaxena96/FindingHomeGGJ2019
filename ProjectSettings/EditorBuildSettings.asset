@@ -5,9 +5,6 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/MainRoom.unity
     guid: df49fd31002e4cb46844163255bc8e5d
@@ -30,6 +27,9 @@ EditorBuildSettings:
     path: Assets/Scenes/LSD.unity
     guid: cc1ac548ee779754bb1e6177f966a7b6
   - enabled: 1
+    path: Assets/Scenes/Finale.unity
+    guid: 613989fd50e405a4989a467a202cd927
+  - enabled: 1
     path: Assets/Scenes/LSDAfterFight.unity
     guid: 4a20a6a8ba7f5c749a7af2e49f878e81
   - enabled: 1
@@ -38,4 +38,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/HurdleGameScene.unity
     guid: 5f884cca15eeab543ba7e5f9427ddbb5
+  - enabled: 1
+    path: Assets/Scenes/FamilyHome.unity
+    guid: 2959457c6c3da9f46ab543e515107613
+  - enabled: 1
+    path: Assets/Scenes/FamilyFinale.unity
+    guid: 16dff289482826946979855b9c360982
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 1e1f0c84400fa7e438a8c9895f16b70a
   m_configObjects: {}

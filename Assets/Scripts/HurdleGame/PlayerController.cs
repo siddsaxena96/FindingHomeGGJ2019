@@ -93,6 +93,6 @@ public class PlayerController : MonoBehaviour
             img.color = new Color(1, 1, 1, i);
             yield return new WaitForSeconds(0.1f);
         }
-        SceneManager.LoadScene("Drugs - Copy");
+        SceneManager.LoadScene("FamilyHome");
     }
 }

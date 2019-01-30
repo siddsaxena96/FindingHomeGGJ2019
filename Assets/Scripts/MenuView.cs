@@ -46,4 +46,12 @@ public class MenuView : MonoBehaviour
         SceneManager.LoadScene("HurdleGameScene");
     }
 
+    void Update()
+    {
+        if (Input.GetKey(KeyCode.Space))
+        {
+            SceneManager.LoadScene("HurdleGameScene");
+        }
+    }
+
 }

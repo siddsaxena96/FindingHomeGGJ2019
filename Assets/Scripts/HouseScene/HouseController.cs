@@ -8,7 +8,6 @@ public class HouseController : MonoBehaviour
     public Animator fallingPainting;
     public GameObject sceneChanger;
     public AudioSource rant;
-    public Transform arrow;
 
     void OnCollisionEnter2D(Collision2D col)
     {
@@ -31,7 +30,7 @@ public class HouseController : MonoBehaviour
         playerAnim.SetTrigger("SadHead");
         rant.Play();
         yield return new WaitForSeconds(5);
-        arrow.rotation = Quaternion.identity;
+
         movementControl.move = true;
     }
 

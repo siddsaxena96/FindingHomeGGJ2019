@@ -7,9 +7,11 @@ public class LoadFirstFight : MonoBehaviour
 {
     public GameObject loadingPanel;
     public AudioSource transitionAudio;
+    public BasicMovement player;
     
     void OnTriggerEnter2D(Collider2D col)
     {             
+        player.move=false;
         StartCoroutine("LoadFirstFightLevel");
     }
 
