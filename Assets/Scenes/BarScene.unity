@@ -630,7 +630,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: ff848e6ccc791c042a992ae36ab230fe, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.38
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -879,11 +879,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Friend
       objectReference: {fileID: 0}
-    - target: {fileID: 4537037185830789129, guid: dbe72b6906dfaad45b0e179978c43fb5,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4537037185830789135, guid: dbe72b6906dfaad45b0e179978c43fb5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -954,6 +949,17 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.6722
       objectReference: {fileID: 0}
+    - target: {fileID: 4537037186000141984, guid: dbe72b6906dfaad45b0e179978c43fb5,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 0509ceb30de601849bf85a4e8be070cb,
+        type: 3}
+    - target: {fileID: 4537037185830789129, guid: dbe72b6906dfaad45b0e179978c43fb5,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4537037186000141991, guid: dbe72b6906dfaad45b0e179978c43fb5,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -969,12 +975,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.19832838
       objectReference: {fileID: 0}
-    - target: {fileID: 4537037186000141984, guid: dbe72b6906dfaad45b0e179978c43fb5,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 0509ceb30de601849bf85a4e8be070cb,
-        type: 3}
     m_RemovedComponents:
     - {fileID: 4537037185830789130, guid: dbe72b6906dfaad45b0e179978c43fb5, type: 3}
     - {fileID: 4537037185830789128, guid: dbe72b6906dfaad45b0e179978c43fb5, type: 3}
@@ -1411,6 +1411,12 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3627085313367826668, guid: db66abfa8dac16346b50a0b42f1f1ed4,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 61204bccbae81954ca8f6337f2cca013,
+        type: 3}
     - target: {fileID: 3627085314974241663, guid: db66abfa8dac16346b50a0b42f1f1ed4,
         type: 3}
       propertyPath: m_Camera
@@ -1441,12 +1447,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 3627085313367826668, guid: db66abfa8dac16346b50a0b42f1f1ed4,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 61204bccbae81954ca8f6337f2cca013,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db66abfa8dac16346b50a0b42f1f1ed4, type: 3}
 --- !u!212 &4537037185649957896

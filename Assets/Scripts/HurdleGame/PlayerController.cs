@@ -27,14 +27,14 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown("down") && disableDown == false)
+        if ((Input.GetKeyDown("down") || Input.GetKeyDown("s")) && disableDown == false)
         {
             playerIdleAnim.UpdateAnimState(false);
             playerRb.transform.eulerAngles = new Vector3(0f, 0f, 90f);
 
             playerRb.gravityScale = 10f;
         }
-        if (Input.GetKeyUp("down") && disableDown == false)
+        if ((Input.GetKeyUp("down") || Input.GetKeyUp("s")) && disableDown == false)
         {
             playerIdleAnim.UpdateAnimState(true);
             playerRb.transform.eulerAngles = new Vector3(0f, 0f, 0f);
@@ -44,7 +44,7 @@ public class PlayerController : MonoBehaviour
     private void OnCollisionStay2D(Collision2D collision)
     {
         //Debug.LogFormat("<color=blue> tag name = {0} and player velocity = {1}</color>", collision.gameObject.tag, playerRb.velocity);
-        if (collision.gameObject.tag == "Floor" && Input.GetKey("up"))
+        if (collision.gameObject.tag == "Floor" && (Input.GetKey("up") || Input.GetKey("w")))
         {
             Debug.Log("player velocity" + playerRb.velocity);
 

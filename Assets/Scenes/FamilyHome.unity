@@ -224,7 +224,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 298007fa72ade4a41bd73ab713c4d6a8, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.6
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -570,6 +570,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4537037185830789131, guid: dbe72b6906dfaad45b0e179978c43fb5,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 6b493bf108218d54e82b8d3e915cb720, type: 2}
     - target: {fileID: 4537037185830789135, guid: dbe72b6906dfaad45b0e179978c43fb5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -640,11 +645,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.78158
       objectReference: {fileID: 0}
-    - target: {fileID: 4537037185830789131, guid: dbe72b6906dfaad45b0e179978c43fb5,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 6b493bf108218d54e82b8d3e915cb720, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dbe72b6906dfaad45b0e179978c43fb5, type: 3}
 --- !u!1 &1509055269
@@ -862,7 +862,7 @@ GameObject:
   - component: {fileID: 2103269806}
   - component: {fileID: 2103269807}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: BGmusic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
