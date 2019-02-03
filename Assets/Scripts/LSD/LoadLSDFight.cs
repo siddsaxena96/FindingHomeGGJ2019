@@ -7,13 +7,15 @@ public class LoadLSDFight : MonoBehaviour
 {
     public GameObject loadingPanel;
     public AudioSource transitionAudio;
+    public BasicMovement player;
 
 
     void OnCollisionEnter2D(Collision2D col)
     {                
         if(col.gameObject.tag=="Player")        
         {            
-            StartCoroutine("LSDFIGHT");            
+            StartCoroutine("LSDFIGHT");      
+            player.move=false;      
         }
     }
 
